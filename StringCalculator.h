@@ -18,6 +18,7 @@ int issinglechar(const char *input)
    if(input[1]=='\0')
    {
       issingledigit(input);
+      break;
    }
    return 1;
 }
