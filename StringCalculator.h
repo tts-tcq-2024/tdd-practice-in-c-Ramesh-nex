@@ -1,14 +1,14 @@
-bool isemptystr(const char *input)
+int isnotemptystr(const char *input)
 { if (input == NULL || input[0] == '\0') {
-        return TRUE; 
+        return 1; 
     }
-   return FALSE;
+   return 0;
 }
 
 int add(const char *input) {
-   if(isemptystr(input))
+   if(isnotemptystr(input))
    {
-  return 0;
+          return 0;
     }
  return -1;
 }
