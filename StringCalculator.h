@@ -1,5 +1,9 @@
 int isempty(const char *input)
 {
+   if (input == NULL || input[0] == '\0') {
+        return 0; 
+    }
+           return 1; 
 }
 int issingledigit(const char *input)
 {
@@ -13,7 +17,7 @@ int issinglechar(const char *input)
 {
    if(input[1]=='\0')
    {
-      issingledigit(input)
+      issingledigit(input);
    }
    return 1;
 }
