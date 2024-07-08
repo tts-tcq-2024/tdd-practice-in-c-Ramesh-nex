@@ -13,7 +13,7 @@ int issingledigit(const char *input)
    }
    return 1;
 }
-void issinglechar(const char *input)
+int issinglechar(const char *input)
 {
    if(input[1]=='\0')
    {
