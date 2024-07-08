@@ -13,18 +13,17 @@ int issingledigit(const char *input)
    }
    return 1;
 }
-int issinglechar(const char *input)
+void issinglechar(const char *input)
 {
    if(input[1]=='\0')
    {
       issingledigit(input);
-      break;
    }
-   return 1;
+
 }
 int add(const char *input) 
 {
-   int ret;
+   int ret=1;
    if(isempty(input))
    {
       return 0;
