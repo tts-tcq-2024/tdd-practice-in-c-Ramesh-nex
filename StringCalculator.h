@@ -7,10 +7,10 @@ int isnotemptystr(const char *input)
 int isnotsingledigit(const char *input)
 {
         if((input[1]=='\0')&&(input[0] >= '0' && input[0] <= '9')){
-        return 1; 
+        return (input[0]); 
     }
    return 0;
-
+}
 int add(const char *input) {
    if(isnotemptystr(input))
    {
