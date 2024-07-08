@@ -24,7 +24,7 @@ int add(const char *input)
    {
       return 0;
    }
-   ret = (issingledigit(input))
+   ret = (issinglechar(input));
    return ret
 }
 
