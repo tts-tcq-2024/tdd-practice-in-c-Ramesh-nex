@@ -1,3 +1,3 @@
-int add(char *input) {
+int add(const char *input) {
    
     }
