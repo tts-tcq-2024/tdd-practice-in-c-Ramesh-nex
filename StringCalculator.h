@@ -7,7 +7,7 @@ int isempty(const char *input)
 }
 int issingledigit(const char *input)
 {
-   if(input>=0&&input<=9 )
+   if(input[0]>=0&&input[0]<=9 )
    {
       return input[0];
    }
