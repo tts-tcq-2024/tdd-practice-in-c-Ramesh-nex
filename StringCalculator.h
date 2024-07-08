@@ -29,6 +29,6 @@ int add(const char *input)
       return 0;
    }
    ret = (issinglechar(input));
-   return ret;
+   return 0;
 }
 
