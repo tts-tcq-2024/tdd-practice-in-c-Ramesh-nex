@@ -1,20 +1,38 @@
-int isnotemptystr(const char *input)
-{ if (input == NULL || input[0] == '\0') {
-        return 1; 
-    }
-   return 0;
-}
-int isnotsingledigit(const char *input)
-{
-        int ret;
-       ret = (input[1]=='\0'&&input[0] >= '0' && input[0] <= '9')?  (input[0]): 0;
 
-   return ret;
-}
 int add(const char *input) {
-   if(isnotemptystr(input))
-   {
-          return 0;
+   if (input == NULL || *input == '\0') {
+        return 0;  // Return 0 for empty string
     }
- return -1;
+
+    int sum = 0;
+    char *delimiter = ",\n";  // Default delimiters
+
+    // Check if input starts with //[delimiter]\n pattern
+    if (strncmp(input, "//[", 3) == 0) {
+        char *end = strstr(input, "]\n");
+        if (end != NULL) {
+            *end = '\0';  // Terminate delimiter string
+            delimiter = input + 3;  // Move delimiter pointer past //[ to start of delimiter
+            input = end + 2;  // Move input pointer past ]\n
+        }
+    }
+
+    char *token = strtok(input, delimiter);
+    while (token != NULL) {
+        int number = atoi(token);
+        
+        if (number < 0) {
+            // Throw exception for negative numbers
+            fprintf(stderr, "negatives not allowed: %d\n", number);
+            return -1;  // Indicate error
+        }
+
+        if (number <= 1000) {
+            sum += number;  // Add number to sum if <= 1000
+        }
+
+        token = strtok(NULL, delimiter);
+    }
+
+    return sum;
 }
