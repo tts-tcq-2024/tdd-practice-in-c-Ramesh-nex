@@ -6,10 +6,10 @@ int isnotemptystr(const char *input)
 }
 int isnotsingledigit(const char *input)
 {
-        if((input[1]=='\0')&&(input[0] >= '0' && input[0] <= '9')){
-        return (input[0]); 
-    }
-   return 0;
+        int ret;
+       ret = (input[1]=='\0'&&input[0] >= '0' && input[0] <= '9')?  (input[0]): 0;
+
+   return ret;
 }
 int add(const char *input) {
    if(isnotemptystr(input))
