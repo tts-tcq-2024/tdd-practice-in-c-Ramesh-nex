@@ -1,4 +1,4 @@
-boolean isemptystr(const char *input)
+bool isemptystr(const char *input)
 { if (input == NULL || input[0] == '\0') {
         return TRUE; 
     }
