@@ -29,7 +29,7 @@ int issinglechar(const char *input)
    int ret;
    if(strlen(input)==1)
    {
-      ret = issingledigit(input);
+      ret = issingledigit(input[0]);
    }
    else
    {
