@@ -8,7 +8,12 @@ int issingledigit(const char input)
 }
 int sum(const char *input)
 {
-   return 3; 
+   int tot=0,idx;
+   for(idx=0;idx<strlen(input);i++)
+      {
+   tot = atoi(input[0]);
+      }
+   return tot; 
 }
 int isempty(const char *input)
 {
