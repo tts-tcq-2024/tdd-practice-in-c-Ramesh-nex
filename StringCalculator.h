@@ -6,14 +6,10 @@ int issingledigit(const char input)
    }
    return 0;
 }
-int sum(const char *input)
+void filterNumericCharacters(const char *input, char *output)
 {
-   char *token;
-    int sum = 0,j;
-   char input1[15];
-   char delimiters[15];
-   strcpy(input1,input);
-    for (int i = 0; input[i] != '\0'; ++i) 
+   int j;
+ for (int i = 0; input[i] != '\0'; ++i) 
     {
         char current_char = input[i];
         if (isdigit(current_char))
@@ -21,9 +17,18 @@ int sum(const char *input)
             // Add current_char to output array
             delimiters[j++] = current_char;
         }
-
+    }
+}
+int sum(const char *input)
+{
+   char *token;
+    int sum = 0,j;
+   char input1[15];
+   char delimiters[15];
+   strcpy(input1,input);
+   filterNumericCharacters(input1, delimiters);
     token = strtok(input1, delimiters);
-    } 
+    
     while (token != NULL) {
         // Convert token to integer using atoi
         int num = atoi(token);
