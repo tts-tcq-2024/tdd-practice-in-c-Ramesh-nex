@@ -31,7 +31,7 @@ int sum(const char *input)
    int total=0;
    while(input[idx] != '\0')
       {
-         total += input[i];
+         total += input[idx];
       }
   return total; 
 }
