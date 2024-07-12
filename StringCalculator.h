@@ -25,7 +25,7 @@ void isDelimiterPresent(const char *input, const char *delimiters) {
     }
     if(ret==1)
     {
-       filterNumericCharacters(input, output);
+       filterNumericCharacters(input, delimiters);
     }
 }
 
