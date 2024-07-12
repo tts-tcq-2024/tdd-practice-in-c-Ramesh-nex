@@ -35,7 +35,7 @@ int issinglechar(const char *input)
    int ret;
    if(strlen(input)==1)
    {
-      ret = input[0];
+      ret = atoi(input[0]);
    }
    else
    {
