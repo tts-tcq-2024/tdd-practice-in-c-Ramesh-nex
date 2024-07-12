@@ -11,9 +11,18 @@ int sum(const char *input)
    char *token;
     int sum = 0;
    char input1[15];
+   char delimiters[15];
    strcpy(input1,input);
+    for (int i = 0; input[i] != '\0'; ++i) {
+        char current_char = input[i];
+        
+        // Check if current_char is a numeric digit
+        if (isdigit(current_char)) {
+            // Add current_char to output array
+            delimiters[j++] = current_char;
+        }
     // Tokenize the input string based on comma delimiter
-    token = strtok(input1, ",\n");
+    token = strtok(input1, delimiters);
     
     while (token != NULL) {
         // Convert token to integer using atoi
