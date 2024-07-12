@@ -10,9 +10,10 @@ int sum(const char *input)
 {
    char *token;
     int sum = 0;
-
+   char input1[];
+   strcpy(input1,input)
     // Tokenize the input string based on comma delimiter
-    token = strtok(input, ",");
+    token = strtok(input1, ",");
     
     while (token != NULL) {
         // Convert token to integer using atoi
