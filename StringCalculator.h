@@ -84,13 +84,13 @@ int add(const char *input)
    int ret=1;
    if(isempty(input))
    {
-      return 0;
+      ret = 0;
    }
    else
    {
      ret = issinglechar(input);
    }
    ret = (issinglechar(input));
-   return 0;
+   return ret;
 }
 
