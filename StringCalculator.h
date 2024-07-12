@@ -10,7 +10,7 @@ int sum(const char *input)
 {
    char *token;
     int sum = 0;
-   char input1[];
+   char input1[15];
    strcpy(input1,input)
     // Tokenize the input string based on comma delimiter
     token = strtok(input1, ",");
