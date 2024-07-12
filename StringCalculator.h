@@ -18,23 +18,24 @@ int isempty(const char *input)
 }
 int issingledigit(const char *input)
 {
-   if(input[0]>=0&&input[0]<=9 )
+   if(input>=0&&input<=9 )
    {
-      return input[0];
+      return input;
    }
-   return 1;
+   return 0;
 }
 int issinglechar(const char *input)
 {
-   if(input[1]=='\0')
+   int ret;
+   if(strlen(input)==1)
    {
-      issingledigit(input);
+      ret = issingledigit(input);
    }
    else
    {
-      sum(input);
+      ret = sum(input);
    }
-
+return ret;
 }
 
 int add(const char *input) 
@@ -43,6 +44,10 @@ int add(const char *input)
    if(isempty(input))
    {
       return 0;
+   }
+   else
+   {
+     ret = issinglechar(input);
    }
    ret = (issinglechar(input));
    return 0;
