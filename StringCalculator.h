@@ -13,7 +13,7 @@ int sum(const char *input)
    char input1[15];
    strcpy(input1,input);
     // Tokenize the input string based on comma delimiter
-    token = strtok(input1, ",");
+    token = strtok(input1, ",\n");
     
     while (token != NULL) {
         // Convert token to integer using atoi
