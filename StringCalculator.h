@@ -17,8 +17,10 @@ int isDelimiterPresent(const char *input, const char *delimiters) {
 }
 void filterNumericCharacters(const char *input, char *output)
 {
-   int j;
- for (int i = 0; input[i] != '\0'; ++i) 
+   if(isDelimiterPresent)
+   {
+      int j;
+    for (int i = 0; input[i] != '\0'; ++i) 
     {
         char current_char = input[i];
         if (isdigit(current_char))
@@ -27,6 +29,7 @@ void filterNumericCharacters(const char *input, char *output)
             output[j++] = current_char;
         }
     }
+   }
 }
 int sum(const char *input)
 {
@@ -35,11 +38,10 @@ int sum(const char *input)
    char input1[15];
    char delimiters[15];
    strcpy(input1,input);
-   if(isDelimiterPresent)
-   {
+   
    filterNumericCharacters(input1, delimiters);
     token = strtok(input1, delimiters);
-   }
+   
     while (token != NULL) {
         // Convert token to integer using atoi
         int num = atoi(token);
