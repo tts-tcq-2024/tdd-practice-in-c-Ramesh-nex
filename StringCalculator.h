@@ -25,6 +25,9 @@ int sum(const char *input)
         // Get next token
         token = strtok(NULL, ",");
     }
+   if (sum > 1000) {
+        sum = 1;
+    }
    return sum; 
 }
 int isempty(const char *input)
