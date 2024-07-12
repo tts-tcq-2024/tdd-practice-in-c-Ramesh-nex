@@ -16,7 +16,7 @@ void isDelimiterPresent(const char *input, const char *delimiters) {
     }
     if(ret==1)
     {
-       filterNumericCharacters(*input, *output)
+       filterNumericCharacters(input, output);
     }
 }
 
@@ -37,7 +37,7 @@ int sum(const char *input)
    char delimiters[15];
    strcpy(input1,input);
    
-   isDelimiterPresent(input1, delimiters)
+   isDelimiterPresent(input1, delimiters);
   
     token = strtok(input1, delimiters);
    
