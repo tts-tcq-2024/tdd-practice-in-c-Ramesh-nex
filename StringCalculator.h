@@ -6,6 +6,15 @@ int issingledigit(const char input)
    }
    return 0;
 }
+// Funct
+void filterNumericCharacters(const char *input, char *output) {
+    while (*input) {
+        *output = isdigit(*input) ? *input : *output;
+        output += isdigit(*input); // Increment output pointer conditionally
+        ++input;
+    }
+    *output = '\0'; // Null-terminate the output string
+}
 void isDelimiterPresent(const char *input, const char *delimiters) {
     int ret=0; 
     while (*input) {
@@ -20,15 +29,7 @@ void isDelimiterPresent(const char *input, const char *delimiters) {
     }
 }
 
-// Funct
-void filterNumericCharacters(const char *input, char *output) {
-    while (*input) {
-        *output = isdigit(*input) ? *input : *output;
-        output += isdigit(*input); // Increment output pointer conditionally
-        ++input;
-    }
-    *output = '\0'; // Null-terminate the output string
-}
+
 int sum(const char *input)
 {
    char *token;
