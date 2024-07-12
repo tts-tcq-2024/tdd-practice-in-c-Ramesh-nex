@@ -15,7 +15,7 @@ void filterNumericCharacters(const char *input, char *output) {
     }
     *output = '\0'; // Null-terminate the output string
 }
-void isDelimiterPresent(const char *input, const char *delimiters) {
+void isDelimiterPresent(char *input, char *delimiters) {
     int ret=0; 
     while (*input) {
         if (strchr(delimiters, *input)) {
