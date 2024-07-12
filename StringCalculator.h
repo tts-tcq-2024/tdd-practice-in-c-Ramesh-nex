@@ -17,10 +17,10 @@ void strtonum(const char* ch, int *num_arr,int *cnt)
 {
     static int num = 0;
 
-    if(check_num(ch[*cnt]))
+    if(issingledigit(ch[*cnt]))
     {
        num = num * 10 + ch[*cnt] - '0';
-       if(check_num(ch[(*cnt)+1]))
+       if(issingledigit(ch[(*cnt)+1]))
        {
            (*cnt)++;
        }
