@@ -1,3 +1,14 @@
+
+int sum(const char *input)
+{
+   int idx =0;
+   int total=0;
+   while(input[idx] != '\0')
+      {
+         total += input[idx];
+      }
+  return total; 
+}
 int isempty(const char *input)
 {
    if (input == NULL || input[0] == '\0') {
@@ -25,16 +36,7 @@ int issinglechar(const char *input)
    }
 
 }
-int sum(const char *input)
-{
-   int idx =0;
-   int total=0;
-   while(input[idx] != '\0')
-      {
-         total += input[idx];
-      }
-  return total; 
-}
+
 int add(const char *input) 
 {
    int ret=1;
