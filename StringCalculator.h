@@ -18,16 +18,14 @@ int sum(const char *input)
     while (token != NULL) {
         // Convert token to integer using atoi
         int num = atoi(token);
-        
+        if (num <= 1000) {
         // Add to the sum
         sum += num;
-        
+        }
         // Get next token
         token = strtok(NULL, ",");
     }
-   if (sum > 1000) {
-        sum = 1;
-    }
+
    return sum; 
 }
 int isempty(const char *input)
