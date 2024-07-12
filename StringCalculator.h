@@ -15,7 +15,7 @@ void filterNumericCharacters(const char *input, char *output)
         if (isdigit(current_char))
         {
             // Add current_char to output array
-            delimiters[j++] = current_char;
+            output[j++] = current_char;
         }
     }
 }
