@@ -20,15 +20,13 @@ void filterNumericCharacters(const char *input, char *output)
    if(isDelimiterPresent)
    {
       int j;
-    for (int i = 0; input[i] != '\0'; ++i) 
-    {
-        char current_char = input[i];
-        if (isdigit(current_char))
+    for (; *input; ++input)
+       {
+        if (isdigit(*input))
         {
-            // Add current_char to output array
-            output[j++] = current_char;
+            *output++ = *input;
         }
-    }
+      }
    }
 }
 int sum(const char *input)
