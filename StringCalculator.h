@@ -27,6 +27,7 @@ while (*input)
         ++input;
    }
 }
+}
 int sum(const char *input)
 {
    char *token;
