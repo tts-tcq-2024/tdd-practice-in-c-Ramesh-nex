@@ -1,11 +1,10 @@
-int sum(const char *input)
+int sum(char *input)
 {
    char *token;
     int sum = 0,j;
-   char input1[15];
+
    char delimiters[15]="$#\n:,;//\&#%";
-   strcpy(input1,input);
-   
+  
     token = strtok(input1, delimiters);
    
     while (token != NULL) {
@@ -33,13 +32,15 @@ int isempty(const char *input)
 int issinglechar(const char *input)
 {
    int ret;
+   char input1[15];
+   strcpy(input1,input);
    if(strlen(input)==1)
    {
       ret = atoi(input[0]);
    }
    else
    {
-      ret = sum(input);
+      ret = sum(input1);
    }
 return ret;
 }
