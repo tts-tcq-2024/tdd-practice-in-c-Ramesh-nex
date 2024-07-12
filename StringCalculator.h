@@ -19,7 +19,21 @@ int issinglechar(const char *input)
    {
       issingledigit(input);
    }
+   else
+   {
+      sum(input);
+   }
 
+}
+int sum(const char *input)
+{
+   int idx =0;
+   int total=0;
+   while(input[idx] != '\0')
+      {
+         total += input[i];
+      }
+  return total; 
 }
 int add(const char *input) 
 {
