@@ -1,11 +1,11 @@
 int sum(char *input)
 {
    char *token;
-    int sum = 0,j;
+    int sum = 0;
 
    char delimiters[15]="$#\n:,;//\&#%";
   
-    token = strtok(input1, delimiters);
+    token = strtok(input, delimiters);
    
     while (token != NULL) {
         // Convert token to integer using atoi
@@ -34,9 +34,9 @@ int issinglechar(const char *input)
    int ret;
    char input1[15];
    strcpy(input1,input);
-   if(strlen(input)==1)
+   if(strlen(input1)==1)
    {
-      ret = atoi(input[0]);
+      ret = atoi(input1);
    }
    else
    {
