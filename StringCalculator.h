@@ -83,7 +83,7 @@ int add(const char *input)
    {
      ret = issinglechar(input);
    }
-   ret = (issinglechar(input));
+  
    return ret;
 }
 
