@@ -11,7 +11,7 @@ int sum(const char *input)
    int tot=0,idx;
    for(idx=0;idx<strlen(input);i++)
       {
-   tot = atoi(input[0]);
+   tot += atoi(input[0]);
       }
    return tot; 
 }
