@@ -6,27 +6,28 @@ int issingledigit(const char input)
    }
    return 0;
 }
-int isDelimiterPresent(const char *input, const char *delimiters) {
+void isDelimiterPresent(const char *input, const char *delimiters) {
+    int ret=0; 
     while (*input) {
         if (strchr(delimiters, *input)) {
-            return 1; // Found delimiter, return true
+            ret = 1; // Found delimiter, return true
         }
         input++;
     }
-    return 0; // Delimiter not found
+    if(ret==1)
+    {
+       filterNumericCharacters(*input, *output)
+    }
 }
-void filterNumericCharacters(const char *input, char *output)
-{
-   if(isDelimiterPresent)
-   {
 
-while (*input)
-   {
+// Funct
+void filterNumericCharacters(const char *input, char *output) {
+    while (*input) {
         *output = isdigit(*input) ? *input : *output;
-        output += isdigit(*input);
+        output += isdigit(*input); // Increment output pointer conditionally
         ++input;
-   }
-}
+    }
+    *output = '\0'; // Null-terminate the output string
 }
 int sum(const char *input)
 {
@@ -36,7 +37,8 @@ int sum(const char *input)
    char delimiters[15];
    strcpy(input1,input);
    
-   filterNumericCharacters(input1, delimiters);
+   isDelimiterPresent(input1, delimiters)
+  
     token = strtok(input1, delimiters);
    
     while (token != NULL) {
