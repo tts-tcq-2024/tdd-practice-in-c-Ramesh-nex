@@ -15,8 +15,6 @@ int sum(const char *input)
    char delimiters[15]="$#\n:,;//\&#%";
    strcpy(input1,input);
    
-   isDelimiterPresent(input1, delimiters);
-  
     token = strtok(input1, delimiters);
    
     while (token != NULL) {
