@@ -1,3 +1,11 @@
+int issingledigit(const char input)
+{
+   if(input>=0&&input<=9 )
+   {
+      return input;
+   }
+   return 0;
+}
 int add_arr(int *arr,int cnt)
 {
     int i = 0;
@@ -56,14 +64,7 @@ int isempty(const char *input)
     }
            return 0; 
 }
-int issingledigit(const char input)
-{
-   if(input>=0&&input<=9 )
-   {
-      return input;
-   }
-   return 0;
-}
+
 int issinglechar(const char *input)
 {
    int ret;
