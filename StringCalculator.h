@@ -19,14 +19,12 @@ void filterNumericCharacters(const char *input, char *output)
 {
    if(isDelimiterPresent)
    {
-      int j;
-    for (; *input; ++input)
-       {
-        if (isdigit(*input))
-        {
-            *output++ = *input;
-        }
-      }
+
+while (*input)
+   {
+        *output = isdigit(*input) ? *input : *output;
+        output += isdigit(*input);
+        ++input;
    }
 }
 int sum(const char *input)
