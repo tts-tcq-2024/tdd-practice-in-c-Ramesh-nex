@@ -16,7 +16,7 @@ int isempty(const char *input)
     }
            return 0; 
 }
-int issingledigit(const char *input)
+int issingledigit(const char input)
 {
    if(input>=0&&input<=9 )
    {
