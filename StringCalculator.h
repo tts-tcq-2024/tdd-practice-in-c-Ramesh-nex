@@ -8,12 +8,23 @@ int issingledigit(const char input)
 }
 int sum(const char *input)
 {
-   int tot=0,idx;
-   for(idx=0;idx<strlen(input);i++)
-      {
-   tot += atoi(input[0]);
-      }
-   return tot; 
+   char *token;
+    int sum = 0;
+
+    // Tokenize the input string based on comma delimiter
+    token = strtok(input, ",");
+    
+    while (token != NULL) {
+        // Convert token to integer using atoi
+        int num = atoi(token);
+        
+        // Add to the sum
+        sum += num;
+        
+        // Get next token
+        token = strtok(NULL, ",");
+    }
+   return sum; 
 }
 int isempty(const char *input)
 {
