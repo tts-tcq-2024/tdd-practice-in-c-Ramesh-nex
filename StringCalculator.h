@@ -29,7 +29,8 @@ int isempty(const char *input)
         return 0; 
 }
 
-int issinglechar(const char *input)
+//int issinglechar(const char *input)
+int GetSum(const char *input)
 {
    int ret;
    char input1[15];
@@ -40,7 +41,7 @@ int issinglechar(const char *input)
    }
    else
    {
-      ret = sum(input1);
+      ret = sum(input1);  // ProvideSum only if it is not a single char
    }
 return ret;
 }
@@ -54,7 +55,7 @@ int add(const char *input)
    }
    else
    {
-     ret = issinglechar(input);
+     ret = GetSum(input);
    }
   
    return ret;
